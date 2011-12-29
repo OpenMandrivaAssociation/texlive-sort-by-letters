@@ -17,7 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
 
 %description
 This bundle contains several bibliography styles for separating
@@ -25,20 +24,12 @@ a document's references by the first letter of the first
 author/editor in the bibliography entry. The styles are adapted
 from standard ones or from natbib ones.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -51,7 +42,6 @@ from standard ones or from natbib ones.
 %{_texmfdistdir}/bibtex/bst/sort-by-letters/plainnat-letters.bst
 %{_texmfdistdir}/bibtex/bst/sort-by-letters/siam-letters.bst
 %doc %{_texmfdistdir}/doc/latex/sort-by-letters/README
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -62,5 +52,3 @@ from standard ones or from natbib ones.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
