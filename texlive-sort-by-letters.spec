@@ -1,16 +1,16 @@
-# revision 15878
+# revision 27128
 # category Package
 # catalog-ctan /biblio/bibtex/contrib/sort-by-letters
-# catalog-date 2007-03-12 11:51:09 +0100
-# catalog-license lppl
+# catalog-date 2012-06-04 23:25:44 +0200
+# catalog-license other-free
 # catalog-version undef
 Name:		texlive-sort-by-letters
-Version:	20070312
-Release:	2
+Version:	20120604
+Release:	1
 Summary:	Bibliography styles for alphabetic sorting
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/sort-by-letters
-License:	LPPL
+License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sort-by-letters.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sort-by-letters.doc.tar.xz
 BuildArch:	noarch
@@ -41,7 +41,7 @@ from standard ones or from natbib ones.
 %{_texmfdistdir}/bibtex/bst/sort-by-letters/plain-letters.bst
 %{_texmfdistdir}/bibtex/bst/sort-by-letters/plainnat-letters.bst
 %{_texmfdistdir}/bibtex/bst/sort-by-letters/siam-letters.bst
-%doc %{_texmfdistdir}/doc/latex/sort-by-letters/README
+%doc %{_texmfdistdir}/doc/bibtex/sort-by-letters/README
 
 #-----------------------------------------------------------------------
 %prep
