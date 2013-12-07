@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-sort-by-letters
 Version:	20120604
-Release:	2
+Release:	3
 Summary:	Bibliography styles for alphabetic sorting
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/sort-by-letters
