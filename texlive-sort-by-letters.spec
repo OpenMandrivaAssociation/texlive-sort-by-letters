@@ -5,7 +5,7 @@
 # catalog-license other-free
 # catalog-version undef
 Name:		texlive-sort-by-letters
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	Bibliography styles for alphabetic sorting
 Group:		Publishing
