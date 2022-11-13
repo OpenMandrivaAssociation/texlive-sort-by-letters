@@ -1,18 +1,12 @@
-# revision 27128
-# category Package
-# catalog-ctan /biblio/bibtex/contrib/sort-by-letters
-# catalog-date 2012-06-04 23:25:44 +0200
-# catalog-license other-free
-# catalog-version undef
 Name:		texlive-sort-by-letters
-Version:	20190228
+Version:	27128
 Release:	1
 Summary:	Bibliography styles for alphabetic sorting
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/sort-by-letters
 License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sort-by-letters.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sort-by-letters.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sort-by-letters.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sort-by-letters.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ author/editor in the bibliography entry. The styles are adapted
 from standard ones or from natbib ones.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -45,28 +39,10 @@ from standard ones or from natbib ones.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Aug 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 20120604-1
-+ Revision: 812878
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20070312-2
-+ Revision: 756074
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20070312-1
-+ Revision: 719556
-- texlive-sort-by-letters
-- texlive-sort-by-letters
-- texlive-sort-by-letters
-- texlive-sort-by-letters
-
