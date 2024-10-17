@@ -3,7 +3,7 @@ Version:	27128
 Release:	2
 Summary:	Bibliography styles for alphabetic sorting
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/biblio/bibtex/contrib/sort-by-letters
+URL:		https://www.ctan.org/tex-archive/biblio/bibtex/contrib/sort-by-letters
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sort-by-letters.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/sort-by-letters.doc.r%{version}.tar.xz
